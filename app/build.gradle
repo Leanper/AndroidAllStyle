@@ -29,6 +29,7 @@ dependencies {
     implementation var.Design
     implementation var.appcompatV7
     implementation var.SupportRecyclerviewV7
+    implementation 'org.xutils:xutils:3.3.36'
 
     //黄油刀
     implementation 'com.jakewharton:butterknife:8.5.1'

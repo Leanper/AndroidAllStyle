@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import com.leanper.androidallstyle.R;
 import com.leanper.androidallstyle.activity.loadstate.LoadStateActivity;
+import com.leanper.androidallstyle.activity.myview.LearnDrawViewActivity;
 import com.leanper.androidallstyle.adapter.CommonAdapter;
 import com.leanper.androidallstyle.adapter.DividerItemDecoration;
 import com.leanper.androidallstyle.adapter.MultiItemTypeAdapter;
@@ -88,7 +89,9 @@ public class ThridFragment extends Fragment {
                          intent=new Intent(getActivity(),LoadStateActivity.class);
 
                         break;
-                    case 2:
+                    case 1:
+                        intent=new Intent(getActivity(),LearnDrawViewActivity.class);
+
                         break;
                         default:
                 }
@@ -104,7 +107,7 @@ public class ThridFragment extends Fragment {
 
     public void addData() {
         mViewList.add("数据加载状态");
-        mViewList.add("sas");
+        mViewList.add("自定义view1 ");
         mViewList.add("sas");
         mViewList.add("ss");
         mViewList.add("sas");

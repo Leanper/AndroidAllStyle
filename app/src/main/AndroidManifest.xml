@@ -3,6 +3,7 @@
     package="com.leanper.androidallstyle">
 
     <application
+        android:name=".main.MyApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -16,9 +17,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.loadstate.LoadStateActivity"></activity>
-        <activity android:name=".activity.loadstate.TestActivity"/>
-
+        <activity android:name=".activity.loadstate.LoadStateActivity" />
+        <activity android:name=".activity.loadstate.TestActivity" />
+        <activity android:name=".activity.myview.LearnDrawViewActivity"></activity>
     </application>
 
 </manifest>
