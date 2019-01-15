@@ -6,6 +6,10 @@
     android:layout_height="match_parent">
     <include layout="@layout/app_toolbar_fragment"/>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray2"></View>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/viewrecyclerview"

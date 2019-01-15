@@ -44,6 +44,8 @@ public class ThridFragment extends Fragment {
     RecyclerView viewrecyclerview;
     private View mFragmentView;
     private Unbinder bind;
+    
+    private String TAG="ThridFragment";
 
     /**
      * 各种视图的名称集合
@@ -93,6 +95,8 @@ public class ThridFragment extends Fragment {
                         intent=new Intent(getActivity(),LearnDrawViewActivity.class);
 
                         break;
+                    case 2:
+                        break;
                         default:
                 }
                 startActivity(intent);
@@ -106,11 +110,30 @@ public class ThridFragment extends Fragment {
     }
 
     public void addData() {
+
         mViewList.add("数据加载状态");
         mViewList.add("自定义view1 ");
-        mViewList.add("sas");
         mViewList.add("ss");
         mViewList.add("sas");
+//            RequestParams params = new RequestParams("http://120.76.205.241:8000/news/qihoo?kw=%E7%99%BD&site=qq.com&apikey=wKxjkhdzYwqoMaOxSdqeTL0OPEP0dc1PqIffwnHV3hCKGdTcaGovguzDdFP4kivH\n");
+//            x.http().get(params, new Callback.CommonCallback<String>() {
+//                @Override
+//                public void onSuccess(String result) {
+//                    //解析result
+//                    Log.i(TAG, "onSuccess: 0"+result);
+//                }
+//                //请求异常后的回调方法
+//                @Override
+//                public void onError(Throwable ex, boolean isOnCallback) {
+//                }
+//                //主动调用取消请求的回调方法
+//                @Override
+//                public void onCancelled(CancelledException cex) {
+//                }
+//                @Override
+//                public void onFinished() {
+//                }
+//            });
     }
 
     @Override

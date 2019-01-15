@@ -47,6 +47,7 @@ public class LoadStateActivity extends BaseActivity {
         initViewContent();
         initData();
         initRecycleView();
+
     }
 
     private void initViewContent() {

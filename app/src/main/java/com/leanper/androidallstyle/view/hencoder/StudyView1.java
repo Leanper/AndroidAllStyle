@@ -18,16 +18,16 @@ public class StudyView1 extends View {
 
     private Paint mPaint;
 
-    public StudyView1(Context context) {
-        this(context,null);
-    }
-    public StudyView1(Context context, AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-    }
-    public StudyView1(Context context, AttributeSet attrs) {
-        this(context, attrs,0);
-        initPaint();
-    }
+        public StudyView1(Context context) {
+            this(context,null);
+        }
+        public StudyView1(Context context, AttributeSet attrs, int defStyleAttr) {
+            super(context, attrs, defStyleAttr);
+        }
+        public StudyView1(Context context, AttributeSet attrs) {
+            this(context, attrs,0);
+            initPaint();
+        }
 
     //初始化操作
     private void initPaint() {
