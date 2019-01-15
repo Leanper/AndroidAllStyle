@@ -21,6 +21,7 @@ import com.leanper.androidallstyle.adapter.CommonAdapter;
 import com.leanper.androidallstyle.adapter.DividerItemDecoration;
 import com.leanper.androidallstyle.adapter.MultiItemTypeAdapter;
 import com.leanper.androidallstyle.adapter.ViewHolder;
+import com.leanper.androidallstyle.utils.StatusBarUtils;
 
 import java.util.ArrayList;
 
@@ -55,6 +56,8 @@ public class ThridFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        StatusBarUtils.setStatusTextColor(false,getActivity());
+
         mFragmentView = inflater.inflate(R.layout.fragment_three, container, false);
         bind = ButterKnife.bind(this, mFragmentView);
         init();

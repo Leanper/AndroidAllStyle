@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_centerInParent="true"
+        android:id="@+id/unload_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/view_icon_no_data" />
+
+    <TextView
+        android:id="@+id/unload2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/unload_img"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20px"
+        android:text="没有新的内容"
+        android:textColor="@color/colorTheme"
+        android:textSize="30px" />
+
+    <TextView
+        android:layout_toRightOf="@id/unload2"
+        android:id="@+id/unload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/unload_img"
+        android:layout_marginTop="10px"
+        android:text="登录"
+        android:textColor="@color/gray1"
+        android:textSize="40px" />
+
+</RelativeLayout>
