@@ -1,4 +1,6 @@
-#自定义path的简单实用
-##基本简单方法
-###啥的
-*说的是的
+#path的简单介绍
+
+##api描述
+### 
+![image](image/path_api.png)
+aaa
