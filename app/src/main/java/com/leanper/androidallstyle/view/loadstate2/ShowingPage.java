@@ -9,6 +9,7 @@ import android.widget.RelativeLayout;
 import com.leanper.androidallstyle.R;
 import com.leanper.androidallstyle.utils.CommonUtils;
 import com.leanper.androidallstyle.utils.NetUtils;
+import com.leanper.androidallstyle.utils.StatusBarUtils;
 
 
 /**
@@ -63,6 +64,9 @@ public abstract class ShowingPage extends FrameLayout implements View.OnClickLis
         titleLayout.setVisibility(needTitleView() ? VISIBLE : GONE);
 
         showPage();
+
+        //TODO 设置toolbar的高度
+//        setTitleLayoutHeight();
     }
 
     //添加成功的视图
@@ -92,6 +96,17 @@ public abstract class ShowingPage extends FrameLayout implements View.OnClickLis
         showFrameLayout.setVisibility(currentState == STATE_LOAD_SUCCESS ? View.VISIBLE : View.GONE);
         unloaditem.setVisibility(currentState == STATE_LOAD_UNLOAD ? View.VISIBLE : View.GONE);
     }
+    //设置title的背景颜色
+    public void setTitleLayoutBackgroudCOlor(int color){
+        titleLayout.setBackgroundColor(color);
+    }
+
+    public void setTitleLayoutHeight(){
+        titleLayout.setMinimumHeight(StatusBarUtils.getNavigationBarHeight(context));
+    }
+
+
+
 
     public void setIOnResetShowingPage(IOnResetShowingPage iOnResetShowingPage) {
         this.iOnResetShowingPage = iOnResetShowingPage;

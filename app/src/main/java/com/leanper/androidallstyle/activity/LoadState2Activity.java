@@ -1,5 +1,6 @@
 package com.leanper.androidallstyle.activity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -35,12 +36,15 @@ public class LoadState2Activity extends BaseShowingPageTitleActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bind = ButterKnife.bind(this);
+        showingPage.setTitleLayoutBackgroudCOlor(Color.GREEN);
+
     }
 
     @Override
     public boolean isNeedTiele() {
         return true;
     }
+
 
     @Override
     protected void onLoad() {

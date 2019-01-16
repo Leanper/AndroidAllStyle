@@ -7,30 +7,46 @@ import android.graphics.Color;
 import android.graphics.EmbossMaskFilter;
 import android.graphics.LinearGradient;
 import android.graphics.Paint;
+import android.graphics.RectF;
 import android.graphics.Shader;
 import android.graphics.Typeface;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
 import android.view.View;
 
 import com.leanper.androidallstyle.R;
+/**
+ * @Title:  StudyView1
 
+ * @Description:    自定义view第一篇
+ * @author:  Leanper
+ * @date:   2019/1/16 11:10
+https://blog.csdn.net/qq_35427437/article/details/80045074这个博客很赞
+ */
 public class StudyView1 extends View {
 
     private Paint mPaint;
+    private Paint mRectPaint;
 
-        public StudyView1(Context context) {
-            this(context,null);
-        }
-        public StudyView1(Context context, AttributeSet attrs, int defStyleAttr) {
-            super(context, attrs, defStyleAttr);
-        }
-        public StudyView1(Context context, AttributeSet attrs) {
-            this(context, attrs,0);
-            initPaint();
-        }
+    public StudyView1(Context context) {
+        this(context,null);
+    }
+    public StudyView1(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+    }
+    public StudyView1(Context context, AttributeSet attrs) {
+        this(context, attrs,0);
+        initPaint();
+    }
 
     //初始化操作
     private void initPaint() {
+        mRectPaint = new Paint();
+        mRectPaint.setAntiAlias(true);
+        mRectPaint.setStyle(Paint.Style.STROKE);
+        mRectPaint.setStrokeWidth(2);
+        mRectPaint.setColor(R.color.black);
 
         mPaint = new Paint();
         mPaint.setAntiAlias(true);//抗锯齿
@@ -79,16 +95,27 @@ public class StudyView1 extends View {
 
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         canvas.drawCircle(200,100,100,mPaint);
         canvas.drawText("好嗨哟，this is for you",100,100,mPaint);
-        //https://blog.csdn.net/qq_35427437/article/details/80045074
-//        canvas.drawArc();
-//        canvas.drawOval();
-//        canvas.drawBitmap();
-//        canvas.drawRect();
+//        canvas.drawRect(20,20,100,120,mRectPaint);
+        canvas.drawRoundRect(20,220,100,320,20,20,mRectPaint);
+        RectF rect = new RectF(20, 30, 100, 100);
+        canvas.drawArc(rect,60,90,true,mRectPaint);
+
+        //按照既定点 绘制文本内容
+        canvas.drawPosText("大傻子哈哈哈", new float[]{
+                10,10, //第一个字母在坐标10,10
+                20,20, //第二个字母在坐标20,20
+                30,30, //....
+                40,40,
+                50,50,
+                60,60,
+                70,70
+        }, mRectPaint);
     }
 
 
