@@ -2,5 +2,5 @@
 
 ##api描述
 ### 
-![image](image/path_api.png)
+![image](https://github.com/Leanper/AndroidAllStyle/tree/master/image/path_api.png)
 aaa

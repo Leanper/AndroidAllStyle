@@ -8,15 +8,7 @@ import com.leanper.androidallstyle.R;
 import com.leanper.androidallstyle.view.loadstate.StateLayoutManager;
 
 
-/**
- * ================================================
- * 作    者：杨充
- * 版    本：1.0
- * 创建日期：2017/7/6
- * 描    述：抽取类
- * 修订历史：
- * ================================================
- */
+
 public abstract class BaseActivity extends AppCompatActivity {
 
     protected StateLayoutManager statusLayoutManager;

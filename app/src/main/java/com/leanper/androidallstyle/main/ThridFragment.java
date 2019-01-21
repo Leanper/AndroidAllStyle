@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.leanper.androidallstyle.R;
+import com.leanper.androidallstyle.activity.PickViewActivity;
 import com.leanper.androidallstyle.activity.loadstate.LoadStateActivity;
 import com.leanper.androidallstyle.activity.myview.LearnDrawViewActivity;
 import com.leanper.androidallstyle.adapter.CommonAdapter;
@@ -99,6 +100,8 @@ public class ThridFragment extends Fragment {
 
                         break;
                     case 2:
+                        intent=new Intent(getActivity(),PickViewActivity.class);
+
                         break;
                         default:
                 }
@@ -116,6 +119,7 @@ public class ThridFragment extends Fragment {
 
         mViewList.add("数据加载状态");
         mViewList.add("自定义view1 ");
+        mViewList.add("PickView");
         mViewList.add("ss");
         mViewList.add("sas");
 //            RequestParams params = new RequestParams("http://120.76.205.241:8000/news/qihoo?kw=%E7%99%BD&site=qq.com&apikey=wKxjkhdzYwqoMaOxSdqeTL0OPEP0dc1PqIffwnHV3hCKGdTcaGovguzDdFP4kivH\n");
