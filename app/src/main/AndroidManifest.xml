@@ -23,24 +23,25 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- 别名2 -->
+        </activity>
+
         <activity-alias
-            android:name=".NewActivity2"
+            android:name=".NewActivity1"
             android:enabled="false"
-            android:icon="@mipmap/radar_chart"
-            android:label="Alias2"
+            android:icon="@mipmap/medium_circle_fill"
+            android:label="My Heart❤"
             android:targetActivity=".main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity-alias>
+        </activity-alias> <!-- 别名2 -->
         <activity-alias
-            android:name=".NewActivity1"
+            android:name=".NewActivity2"
             android:enabled="false"
-            android:icon="@mipmap/medium_circle_fill"
-            android:label="My Heart❤"
+            android:icon="@mipmap/radar_chart"
+            android:label="Alias2"
             android:targetActivity=".main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -68,7 +69,10 @@
         <!-- </intent-filter> -->
         <!-- </receiver> -->
         <activity android:name=".activity.LoadState2Activity" />
-        <activity android:name=".activity.PickViewActivity"></activity>
+        <activity android:name=".activity.PickViewActivity" />
+        <activity android:name=".activity.AddLayoutActivity" />
+        <activity android:name=".activity.TestaActivity" />
+        <activity android:name=".activity.myview.ViewPathActivity"></activity>
     </application>
 
 </manifest>

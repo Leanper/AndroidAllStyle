@@ -15,16 +15,16 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.leanper.androidallstyle.R;
+import com.leanper.androidallstyle.activity.AddLayoutActivity;
 import com.leanper.androidallstyle.activity.ChangeIconActivity;
 import com.leanper.androidallstyle.activity.LoadState2Activity;
 import com.leanper.androidallstyle.activity.SendShortcutActivity;
+import com.leanper.androidallstyle.activity.TestaActivity;
 import com.leanper.androidallstyle.adapter.CommonAdapter;
 import com.leanper.androidallstyle.adapter.DividerItemDecoration;
 import com.leanper.androidallstyle.adapter.MultiItemTypeAdapter;
 import com.leanper.androidallstyle.adapter.ViewHolder;
 import com.leanper.androidallstyle.utils.StatusBarUtils;
-
-import org.xutils.http.RequestParams;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -108,6 +108,20 @@ public class FirstFragment extends Fragment {
                         intent = new Intent(getActivity(), LoadState2Activity.class);
 
                         break;
+                    case 3:
+                        intent = new Intent(getActivity(), AddLayoutActivity.class);
+//                        Uri uri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+//                        Ringtone rt = RingtoneManager.getRingtone(getActivity(), uri);
+//                        rt.play();
+
+                        break;
+                    case 4:
+                        intent = new Intent(getActivity(), TestaActivity.class);
+//                        Uri uri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+//                        Ringtone rt = RingtoneManager.getRingtone(getActivity(), uri);
+//                        rt.play();
+
+                        break;
                     default:
                 }
                 startActivity(intent);
@@ -125,7 +139,8 @@ public class FirstFragment extends Fragment {
         mViewList.add("切换App logo");
         mViewList.add("发送桌面快捷");
         mViewList.add("加载状态");
-        RequestParams params = new RequestParams("http://120.76.205.241:8000/news/qihoo?kw=%E7%99%BD&site=qq.com&apikey=wKxjkhdzYwqoMaOxSdqeTL0OPEP0dc1PqIffwnHV3hCKGdTcaGovguzDdFP4kivH\n");
+        mViewList.add("懂动态添加布局");
+        mViewList.add("不放音乐");
 
     }
 
