@@ -139,7 +139,7 @@ public class FirstFragment extends Fragment {
         mViewList.add("切换App logo");
         mViewList.add("发送桌面快捷");
         mViewList.add("加载状态");
-        mViewList.add("懂动态添加布局");
+        mViewList.add("动态添加布局");
         mViewList.add("不放音乐");
 
     }
