@@ -5,8 +5,6 @@ import android.content.Context;
 import android.os.Handler;
 import android.os.Process;
 
-import org.xutils.x;
-
 public class MyApp extends Application {
     private static  Context mContext;
     private static Handler handler;
@@ -15,8 +13,8 @@ public class MyApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        x.Ext.init(this);
-        x.Ext.setDebug(false); //输出debug日志，开启会影响性能
+//        x.Ext.init(this);
+//        x.Ext.setDebug(false); //输出debug日志，开启会影响性能
 
         mContext = getApplicationContext();
 

@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.leanper.androidallstyle.R;
+import com.leanper.androidallstyle.bean.IconBean;
 
 public class SendShortcutActivity extends AppCompatActivity {
 
@@ -47,8 +48,10 @@ public class SendShortcutActivity extends AppCompatActivity {
         shortcutIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         shortcut.putExtra(Intent.EXTRA_SHORTCUT_INTENT, shortcutIntent);
         // 快捷图标 TODO 图标处理 将网络图片下载并创建快捷方式图标
+        IconBean iconBean=new IconBean();
+        iconBean.setUrl("https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1550481745&di=0062c1869554e5c43b2778004983a1d3&src=http://img.zcool.cn/community/012bee598986a9000000212969fab6.png");
         Intent.ShortcutIconResource iconRes = Intent.ShortcutIconResource.fromContext(SendShortcutActivity.this, R.mipmap.icon_three);
-        shortcut.putExtra(Intent.EXTRA_SHORTCUT_ICON_RESOURCE, iconRes);
+        shortcut.putExtra(Intent.EXTRA_SHORTCUT_ICON_RESOURCE, iconBean);
         // 发送广播
         sendBroadcast(shortcut);
 
